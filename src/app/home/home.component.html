@@ -1,185 +1,128 @@
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div *ngIf="visible" class="col-md-6">
                 <lbd-chart
-                  [title]="'Email Statistics'"
-                  [subtitle]="'Last Campaign Performance'"
-                  [chartClass]="'ct-perfect-fourth'"
-                  [chartType]="emailChartType"
-                  [chartData]="emailChartData"
-                  [legendItems]="emailChartLegendItems"
-                  [withHr]="true"
-                  [footerIconClass]="'fa fa-clock-o'"
-                  [footerText]="'Campaign sent 2 days ago'">
-                </lbd-chart>
-            </div>
-            <div class="col-md-8">
-                <lbd-chart
-                  [title]="'Users Behavior'"
-                  [subtitle]="'24 Hours performance'"
-                  [chartType]="hoursChartType"
-                  [chartData]="hoursChartData"
-                  [chartOptions]="hoursChartOptions"
-                  [chartResponsive]="hoursChartResponsive"
-                  [legendItems]="hoursChartLegendItems"
-                  [withHr]="true"
-                  [footerIconClass]="'fa fa-history'"
-                  [footerText]="'Updated 3 minutes ago'">
-                </lbd-chart>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <lbd-chart
-                  [title]="'2021 Sales'"
-                  [subtitle]="'All products including Taxes'"
-                  [chartType]="activityChartType"
-                  [chartData]="activityChartData"
-                  [chartOptions]="activityChartOptions"
-                  [chartResponsive]="activityChartResponsive"
-                  [legendItems]="activityChartLegendItems"
-                  [withHr]="true"
-                  [footerIconClass]="'fa fa-check'"
-                  [footerText]="'Data information certified'">
+                        [title]="'Win Rate Stats'"
+                        [subtitle]="'All played matches based on outcome for last 14 days'"
+                        [chartType]="activityChartType"
+                        [chartData]="activityChartData"
+                        [chartOptions]="activityChartOptions"
+                        [chartResponsive]="activityChartResponsive"
+                        [legendItems]="activityChartLegendItems"
+                        [withHr]="true"
+                        [footerIconClass]="'fa fa-check'"
+                        [footerText]="'Data information certified'">
                 </lbd-chart>
             </div>
             <div class="col-md-6">
                 <div class="card">
                     <div class="header">
-                        <h4 class="title">Tasks</h4>
-                        <p class="category">Backend development</p>
+                        <h4 class="title">Heroes</h4>
+                        <!--<p class="category">Hero stats</p>-->
                     </div>
                     <div class="content">
                         <div class="table-full-width">
-                            <table class="table">
+                            <table class="table table-hover table-striped">
+                                <thead class="bg-light align-middle">
+                                <tr>
+                                    <th></th>
+                                    <th>Name</th>
+                                    <th>Level</th>
+                                    <th>THC</th>
+                                    <th>Win Rate</th>
+                                    <th>ROI</th>
+                                    <th>Premium</th>
+                                    <th>Id</th>
+                                </tr>
+                                </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="checkbox">
-                                                <input id="checkbox1" type="checkbox">
-                                                <label for="checkbox1">
-
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>Sign contract for "What are conference organizers afraid of?"</td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="checkbox">
-                                                <input id="checkbox2" type="checkbox" checked>
-                                                <label for="checkbox2">
-
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="checkbox">
-                                                <input id="checkbox3" type="checkbox" checked>
-                                                <label for="checkbox3">
-
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
-                                        </td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="checkbox">
-                                                <input id="checkbox4" type="checkbox">
-                                                <label for="checkbox4">
-
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>Create 4 Invisible User Experiences you Never Knew About</td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="checkbox">
-                                                <input id="checkbox5" type="checkbox" >
-                                                <label for="checkbox5">
-
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>Read "Following makes Medium better"</td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="checkbox">
-                                                <input id="checkbox6" type="checkbox">
-                                                <label for="checkbox6">
-
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>Unfollow 5 enemies from twitter</td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
+                                <tr
+                                        *ngFor="
+                        let hero of heroes
+                        | paginate
+                        : {
+                        itemsPerPage: tableSize,
+                        currentPage: page,
+                        totalItems: count
+                        };
+                        let i = index">
+                                    <td>
+                                        <img src="https://assets.thetanarena.com/{{hero.heroImageSmall}}"
+                                             class="img-fluid rounded-start" alt="Thetan Arena"
+                                             style="width: 25px; height: 30px"
+                                             class="rounded-circle">
+                                    </td>
+                                    <td>{{hero.heroName}}</td>
+                                    <td>{{hero.heroLevel}}</td>
+                                    <td>
+                                        <p class="card-text" align="right"><small>{{hero.thetanCoin}} <img
+                                                src="data:image/png;base64,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"
+                                                width="20" height="20"/></small></p>
+                                    </td>
+                                    <td>
+                                        <p class="card-text" align="right"><small>{{hero.winrate}}% </small><i
+                                                class="pe-7s-graph3"></i></p>
+                                    </td>
+                                    <td>
+                                        <p class="card-text" align="right"><small>{{hero.roi}}% </small><i
+                                                class="pe-7s-cash"></i></p>
+                                    </td>
+                                    <td class="col">
+                                        <p class="card-text" align="right"><small>{{hero.premiumBattleCountUsed}}/{{hero.premiumBattleCount}}
+                                            <img
+                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAACJCAMAAAAv+uv7AAAANlBMVEVHcEy3WAC5WQD///+6WQC2VgC4WQC3WAC3WAC6WQD47eTAaxvbqnzlwqHTlV3w3MnIfDXhtpAHrO+eAAAACnRSTlMAWf//5heDoT/A7x3WkAAAA9ZJREFUeNrtnNeS6yAMhhNwiem8/8ueeJ1CtcFBwJmxbnYycflWSEL8GbjdfBsf92meFyib5+n+uB3bOC0Dgrdhfhxx1MB4wdz3OFBVi7LcB1TbhjEEMqEGFnDLuKA2NvUC4qHMCPWBMqGWZpSWe1MQI4PGoS0JmnsIEmt8xuYgaOnFJS+nNI+Sj1PuHYBs6dPD4CC0zj9DFyTPRH50AYKGTsLkaa2nHJNkvkgukovkIrlILpKuSCTGmODVyPMPYUkP5tgyVoSE2A/FIgGEOfdwEBKiskGASDChB3cIXIkEy30USqqR7D+Y5t7wC8luLkgMTkJISgLpbzxpAkPCqVElognEzEs+A1WUhNsFK5JAzHabgiCRKAFFOeOnYEbHQZG7aSOsz4Uj1kXRySDFs9hFYdFpzwEpRCJxFEVFotUF8d13ikThKIoVtTsghzNVYqekSAqKiIPIY5DEno3GUaR/jQfCE0BSu0cajxV9CJLW5CX3sTqKwuyPLggRqCyJWcZ54N0sBqJQaRIk3OogrZfp7zcmCEXlSdxCxZzXybdPjOtkMkjeeseIW6m0102SzUEGiE5/du7KS+OwGYNitFMMwZH4ywfzpYpkLkZ+Wo3uogiMT8Tq2XWxImEUZXPKTJAzK3QaRtl8wJO7gBJaAeVxlFd6MVSFJBYs8u2x1AJfQj8Jo+gtjjKT5kclJxy3f4NCKapJEolbhU7beXWLymgCVdfZdFGUnxQ/Fkug+tqjIJEEqkhCNY3FLatEooQQaq3qW0SE4lasVzEBOwOyzQdSfoKTBuJWvq5ScCS2A15FPdYnZA5UHgkPvimOIuBGhwcTJdaygHaPPKjMhku/gM0dHiyqoZZFQNcTDyVSbwV8ZeNh4Zz9BnKqxvLwjGfFrahT7Xk4PfgvINkkakfzc4VHClrtXbVEhuS4t3Ih4EiYL9wgX2f7SihgNZYFNCRf8TO1HAFDwkJylkdii0oCgoThgLJmxAk1Xk3yu/0UEsFWk16vyp3/WX4/mxLo392qCEn090j+LvWf5BGx1RCHIDH0CEYd50UXZhC/SCYKIw4KAEmyQmOjlCfJkIoslPIkOe26BiXJmdVENyQKNIvb+uT/J2HFSdjHdNZain5vLDTv1LGL5CK5SC6SiwSSZLpIPJJO9u8MXewGXG3pZp/XdOslUNatiY9OwuRpSyeD00f2vHYYt4/ZuY8t1+am69aR8j20oPHG3tnYm//oY2wah4p7tsXUC0iTkz7CII3Cdh57OIjl6ZApeijMXJdj3DsoZx664NhCdwIvucMypZxjtB2pBGlBZ/wDpKayr92zRVMAAAAASUVORK5CYII="
+                                                    width="20" height="20"/></small></p>
+                                    </td>
+                                    <td><a (click)="goToLink(hero.heroid)">..{{ hero.heroid | slice:hero.heroid.length
+                                        -6 : hero.heroid.length }}</a></td>
+                                </tr>
                                 </tbody>
+
+
                             </table>
-                        </div>
-                        <div class="footer">
-                            <hr>
-                            <div class="stats">
-                                <i class="fa fa-history"></i> Updated 3 minutes ago
+                            <div align="center">
+                                <pagination-controls
+                                        previousLabel="Prev"
+                                        nextLabel="Next"
+                                        (pageChange)="onTableDataChange($event)">
+                                </pagination-controls>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div *ngIf="visible" class="col-md-4">
+                <lbd-chart
+                        [title]="'Win Rate by Game Mode'"
+                        [subtitle]="'All played matches based on outcome for last 14 days'"
+                        [chartType]="emailChartType"
+                        [chartData]="emailChartData"
+                        [chartOptions]="emailChartOptions"
+                        [chartResponsive]="emailChartResponsive"
+                        [legendItems]="emailChartLegendItems"
+                        [withHr]="true"
+                        [footerIconClass]="'fa fa-check'"
+                        [footerText]="'Data information certified'">
+                </lbd-chart>
+
+            </div>
+            <div *ngIf="visible" class="col-md-4" class="col-md-8">
+                <lbd-chart
+                        [title]="'THC'"
+                        [subtitle]="'14 days performance'"
+                        [chartType]="hoursChartType"
+                        [chartData]="hoursChartData"
+                        [chartOptions]="hoursChartOptions"
+                        [chartResponsive]="hoursChartResponsive"
+                        [legendItems]="hoursChartLegendItems"
+                        [withHr]="true"
+                        [footerIconClass]="'fa fa-history'"
+                        [footerText]="'Updated 3 minutes ago'">
+                </lbd-chart>
             </div>
         </div>
     </div>

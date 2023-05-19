@@ -42,6 +42,9 @@ export class LbdChartComponent implements OnInit, AfterViewInit {
   public chartResponsive: any[];
 
   @Input()
+  public winRate: any[];
+
+  @Input()
   public footerIconClass: string;
 
   @Input()
